@@ -19,7 +19,7 @@ export const SiteFooter: React.FC = () => {
             </Link>
           </div>
           <div className="col-span-12 flex flex-col space-y-1 md:col-span-4">
-            <ul className="space-y-2">
+            <ul className="space-y-1 md:text-right">
               <li>
                 <Link
                   href="/about"
