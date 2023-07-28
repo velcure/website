@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --ts-background: 0% 0% 100%;
+    --ts-bg-muted: 210, 20%, 98%;
+    --ts-brand: 221, 39%, 11%;
+    --ts-brand-emphasis: 0, 0%, 20%;
+    --ts-brand-text: 0, 0%, 100%;
+    --ts-text-emphasis: 221, 39%, 11%;
+    --ts-text: 217, 19%, 27%;
+  }
+
+  .dark {
+    --ts-background: 240 10% 3.9%;
+    --ts-bg-muted: 0, 0%, 11%;
+    --ts-brand: 0, 0%, 100%;
+    --ts-brand-text: 0, 0%, 0%;
+    --ts-brand-emphasis: 0, 0%, 88%;
+    --ts-text-emphasis: 220, 14%, 96%;
+    --ts-text: 0, 0%, 84%;
+  }
+}
