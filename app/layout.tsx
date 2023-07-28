@@ -8,6 +8,7 @@ import { SiteHeader } from "#/ui/site-header";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://acme.com"),
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
