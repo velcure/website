@@ -18,16 +18,40 @@ export const SiteFooter: React.FC = () => {
               </span>
             </Link>
           </div>
-          <div className="col-span-12 md:col-span-4">
+          <div className="col-span-12 flex flex-col space-y-1 md:col-span-4">
             <Link
               href="/about"
               className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
             >
               <span>About</span>
             </Link>
+            <Link
+              href="/imprint"
+              className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
+            >
+              <span>Imprint</span>
+            </Link>
+            <Link
+              href="/legal"
+              className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
+            >
+              <span>Legal</span>
+            </Link>
+            <Link
+              href="/privacy"
+              className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
+            >
+              <span>Privacy</span>
+            </Link>
           </div>
         </div>
-        <div className="grid h-full grid-cols-4 gap-8 md:grid-cols-8"></div>
+        <div className="grid h-full grid-cols-4 gap-8 py-8 md:grid-cols-8">
+          <div className="col-span-4">
+            <p>
+              &copy; by {siteConfig.name} {new Date().getFullYear()}
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
   );
