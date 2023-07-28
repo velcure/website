@@ -19,38 +19,47 @@ export const SiteFooter: React.FC = () => {
             </Link>
           </div>
           <div className="col-span-12 flex flex-col space-y-1 md:col-span-4">
-            <Link
-              href="/about"
-              className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
-            >
-              <span>About</span>
-            </Link>
-            <Link
-              href="/imprint"
-              className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
-            >
-              <span>Imprint</span>
-            </Link>
-            <Link
-              href="/legal"
-              className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
-            >
-              <span>Legal</span>
-            </Link>
-            <Link
-              href="/privacy"
-              className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
-            >
-              <span>Privacy</span>
-            </Link>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/about"
+                  className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
+                >
+                  <span>About</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/imprint"
+                  className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
+                >
+                  <span>Imprint</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/legal"
+                  className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
+                >
+                  <span>Legal</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
+                >
+                  <span>Privacy</span>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="grid h-full grid-cols-4 gap-8 py-8 md:grid-cols-8">
-          <div className="col-span-4">
-            <p>
-              &copy; by {siteConfig.name} {new Date().getFullYear()}
-            </p>
-          </div>
+        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+          <p className="text-xs leading-5 text-gray-300">
+            &copy; {new Date().getFullYear()} by {siteConfig.name}. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>
