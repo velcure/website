@@ -1,4 +1,5 @@
 import { SectionBenefits } from "./_components/section-benefits";
+import { SectionFAQ } from "./_components/section-faq";
 import { TeaserHero } from "./_components/teaser-hero";
 
 export default function Page() {
@@ -17,6 +18,7 @@ export default function Page() {
         </div>
       </section>
       <SectionBenefits />
+      <SectionFAQ className="px-8 py-24 md:pb-44" />
     </>
   );
 }
