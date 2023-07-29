@@ -1,5 +1,4 @@
-import { buttonClass } from "#/ui/button";
-import { CalendarPlus } from "lucide-react";
+import { BookAppointmentButton } from "#/ui/book-appointment-button";
 import Image from "next/image";
 import React from "react";
 import maleNurse from "../../public/male_nurse.png";
@@ -21,15 +20,7 @@ export const TeaserHero: React.FC = () => {
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua.
             </p>
-            <a
-              className={buttonClass({
-                size: "xl",
-                className: "inline-flex items-center",
-              })}
-            >
-              <span>Book an Appointment</span>
-              <CalendarPlus className="ml-2 inline-block h-4 w-4" />
-            </a>
+            <BookAppointmentButton />
           </div>
           <div className="relative flex  items-center self-end md:h-auto">
             <Image

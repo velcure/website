@@ -15,6 +15,12 @@ const navBase = cva([
   "ease-in-out",
   "text-sm",
   "font-semibold",
+  "rounded-md",
+  "px-2",
+  "py-1",
+  "text-default",
+  "hover:bg-brand-default",
+  "hover:text-brand",
 ]);
 
 export const MainNav: React.FC = () => {

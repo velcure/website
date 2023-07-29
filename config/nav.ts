@@ -7,8 +7,12 @@ interface NavConfig {
 export const navConfig: NavConfig = {
   mainNav: [
     {
-      title: "Fahrer",
-      href: "#",
+      title: "Medical Facilities",
+      href: "/medical-facilities",
+    },
+    {
+      title: "Ambulance Services",
+      href: "/ambulance-services",
     },
     {
       title: "Unternehmen",
