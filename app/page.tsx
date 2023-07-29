@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <>
       <TeaserHero />
-      <section className="relative pt-24 md:pt-44">
+      <section className="relative px-8 pt-24 md:pt-44">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-default text-3xl font-bold tracking-tight sm:text-4xl">
             Save time and money <br /> with our services
