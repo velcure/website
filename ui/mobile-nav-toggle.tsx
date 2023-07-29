@@ -1,64 +1,90 @@
-'use client'
+"use client";
 
-import { MenuAlt2Icon, XIcon } from '@heroicons/react/solid'
-import clsx from 'clsx'
-import React from 'react'
+import { cn } from "#/lib/utils";
+import { MenuAlt2Icon, XIcon } from "@heroicons/react/solid";
+import React, {
+  ComponentPropsWithoutRef,
+  createContext,
+  forwardRef,
+  useMemo,
+} from "react";
 
-const MobileNavContext = React.createContext<
-  [boolean, React.Dispatch<React.SetStateAction<boolean>>] | undefined
->(undefined)
+interface MobileNavContextValue {
+  isOpen: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  toggle: () => void;
+}
+
+const MobileNavContext = createContext<MobileNavContextValue>({
+  isOpen: false,
+  setOpen: () => {},
+  toggle: () => {},
+});
 
 export function MobileNavContextProvider({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggle = React.useCallback(() => {
+    setIsOpen((isOpen) => !isOpen);
+  }, []);
+
+  const ctx = useMemo(
+    () => ({ isOpen, setOpen: setIsOpen, toggle }),
+    [isOpen, setIsOpen, toggle]
+  );
+
   return (
-    <MobileNavContext.Provider value={[isOpen, setIsOpen]}>
+    <MobileNavContext.Provider value={ctx}>
       {children}
     </MobileNavContext.Provider>
-  )
+  );
 }
 
 export function useMobileNavToggle() {
-  const context = React.useContext(MobileNavContext)
+  const context = React.useContext(MobileNavContext);
   if (context === undefined) {
     throw new Error(
-      'useMobileNavToggle must be used within a MobileNavContextProvider'
-    )
+      "useMobileNavToggle must be used within a MobileNavContextProvider"
+    );
   }
-  return context
+  return context;
 }
 
-export function MobileNavToggle({ children }: { children: React.ReactNode }) {
-  const [isOpen, setIsOpen] = useMobileNavToggle()
+export interface MobileNavToggleProps
+  extends ComponentPropsWithoutRef<"button"> {}
+
+export const MobileNavToggle = forwardRef<
+  HTMLButtonElement,
+  MobileNavToggleProps
+>((props, ref) => {
+  const { isOpen, setOpen } = useMobileNavToggle();
+
+  const { className, ...restProps } = props;
 
   return (
-    <>
-      <button
-        type="button"
-        className="group absolute right-0 top-0 flex h-14 items-center gap-x-2 px-4 lg:hidden"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        <div className="font-medium text-gray-100 group-hover:text-gray-400">
-          Menu
-        </div>
-        {isOpen ? (
-          <XIcon className="block w-6 text-gray-300" />
-        ) : (
-          <MenuAlt2Icon className="block w-6 text-gray-300" />
-        )}
-      </button>
-
-      <div
-        className={clsx('overflow-y-auto lg:static lg:block', {
-          'fixed inset-x-0 bottom-0 top-14 bg-gray-900': isOpen,
-          hidden: !isOpen,
-        })}
-      >
-        {children}
-      </div>
-    </>
-  )
-}
+    <button
+      type="button"
+      className={cn(
+        "group flex h-14 items-center gap-x-2 px-4 lg:hidden",
+        className
+      )}
+      onClick={(e) => {
+        console.log("clicked");
+        setOpen((prev) => !prev);
+      }}
+      ref={ref}
+      {...restProps}
+    >
+      <span className="sr-only">Toggle Menu</span>
+      {isOpen ? (
+        <XIcon className="block w-6 text-gray-300" />
+      ) : (
+        <MenuAlt2Icon className="block w-6 text-gray-300" />
+      )}
+    </button>
+  );
+});

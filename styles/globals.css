@@ -1,5 +1,29 @@
 @tailwind base;
 @tailwind components;
+
+.headroom {
+  @apply left-0 right-0 top-0 z-20;
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+
+.headroom--scrolled {
+  @apply bg-white shadow;
+  transition: transform 200ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
+
 @tailwind utilities;
 
 @layer base {
