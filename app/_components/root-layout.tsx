@@ -216,7 +216,11 @@ const RootLayoutInner: React.FC<RootLayoutInnerProps> = (props) => {
             <main className="w-full flex-auto">{children}</main>
           </motion.div>
         </motion.div>
-        <SiteFooter />
+        <motion.div layout className="bg-white">
+          <div className="bg-brand-default overflow-hidden rounded-t-[40px] pt-14">
+            <SiteFooter />
+          </div>
+        </motion.div>
       </div>
     </MotionConfig>
   );
