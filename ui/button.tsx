@@ -27,6 +27,7 @@ export const buttonClass = cva(
       },
       color: {
         primary: "focus-visible:outline-brand-default",
+        inverted: "focus-visible:outline-white",
       },
       size: {
         base: "px-2.5 py-1.5 text-sm",
@@ -59,9 +60,19 @@ export const buttonClass = cva(
         class: "bg-brand-default text-brand hover:bg-brand-emphasis",
       },
       {
+        appearance: "default",
+        color: "inverted",
+        class: "bg-white text-brand hover:bg-gray-50",
+      },
+      {
         appearance: "outline",
         color: "primary",
         class: "border-brand-default text-emphasis hover:bg-muted",
+      },
+      {
+        appearance: "outline",
+        color: "inverted",
+        class: "border-white text-white hover:bg-gray-50",
       },
     ],
     defaultVariants: {

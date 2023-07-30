@@ -3,9 +3,8 @@ import { siteConfig } from "#/config/site";
 import { fontSans } from "#/lib/fonts";
 import { cn } from "#/lib/utils";
 import "#/styles/globals.css";
-import { SiteFooter } from "#/ui/site-footer";
-import { SiteHeader } from "#/ui/site-header";
 import { Metadata } from "next";
+import { RootLayout } from "./_components/root-layout";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://acme.com"),
@@ -31,27 +30,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
         className={cn(
-          "bg-background min-h-screen font-sans antialiased",
+          "bg-brand-default h-full min-h-screen font-sans antialiased",
           fontSans.variable
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="relative flex min-h-screen flex-col">
-            {/** page content goes here. */}
-            <SiteHeader />
-            <div className="flex-1">{children}</div>
-            <SiteFooter />
-          </div>
+          <RootLayout>{children}</RootLayout>
         </ThemeProvider>
       </body>
     </html>
