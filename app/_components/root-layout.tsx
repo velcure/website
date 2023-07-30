@@ -11,7 +11,6 @@ import { cva } from "class-variance-authority";
 import { MotionConfig, motion, useReducedMotion } from "framer-motion";
 import { XIcon } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React, {
   ComponentPropsWithoutRef,
   ReactElement,
@@ -232,9 +231,7 @@ export interface RootLayoutProps {
 export const RootLayout: React.FC<RootLayoutProps> = (props) => {
   const { children } = props;
 
-  const pathname = usePathname();
-
-  const ctx = useMemo(() => ({ pathname }), [pathname]);
+  const ctx = useMemo(() => ({ pathname: "" }), []);
 
   return (
     <RootLayoutContext.Provider value={ctx}>
