@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+"use client";
+import { motion, useReducedMotion } from "framer-motion";
 import React from "react";
 
 export interface FadeInWhenVisibleProps {
@@ -8,15 +9,17 @@ export interface FadeInWhenVisibleProps {
 export const FadeInWhenVisible: React.FC<FadeInWhenVisibleProps> = (props) => {
   const { children } = props;
 
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.5 }}
       variants={{
-        visible: { opacity: 1, scale: 1 },
-        hidden: { opacity: 0, scale: 0 },
+        hidden: { opacity: 0, y: shouldReduceMotion ? 0 : 24 },
+        visible: { opacity: 1, y: 0 },
       }}
     >
       {children}

@@ -1,25 +1,34 @@
 import { BookAppointmentButton } from "#/ui/book-appointment-button";
+
+import { Container } from "#/ui/Container";
+import { PageIntro } from "#/ui/PageIntro";
 import Image from "next/image";
 import heliosKlinikumSalzgitter from "./helios_klinikum_salzgitter.jpg";
+
+export const metadata = {
+  title: "Simplified Transport for Healthcare Facilities",
+  description:
+    "Velcure offers healthcare facilities an intuitive platform to streamline booking and simplify coordination for medical transports.",
+  keywords: [
+    "hospital transport management",
+    "patient transfer booking",
+    "medical transport coordination",
+    "healthcare logistics software",
+    "clinical ambulance booking",
+  ],
+};
 
 const Page = () => {
   return (
     <>
       <section className="relative px-[5%] py-12">
-        <div className="container">
-          <div className="relative mx-auto flex flex-col items-center justify-center text-center">
-            <div className="mb-2 font-semibold uppercase">
-              Maximize Your Team's Efficiency
-            </div>
-            <h1 className="mb-4 text-3xl font-bold tracking-tighter md:text-6xl">
-              Empowering Healthcare Facilities with Efficient Medical Transport
-              Solutions
-            </h1>
-            <p className="mb-8 text-lg tracking-tight">
-              Spend less time coordinating and more time caring with Velcure.
-            </p>
-          </div>
-        </div>
+        <PageIntro
+          eyebrow="Maximize Your Team's Efficiency"
+          title="Empowering Healthcare Facilities with Efficient Medical Transport
+              Solutions"
+        >
+          <p>Spend less time coordinating and more time caring with Velcure.</p>
+        </PageIntro>
       </section>
       <Image
         className="inline-block h-96 max-w-full object-cover object-center align-middle"
@@ -28,7 +37,7 @@ const Page = () => {
         sizes="100vw"
       />
       <section className="relative px-8 py-12">
-        <div className="container">
+        <Container>
           <div className="mx-auto max-w-2xl lg:text-center">
             <div className="mb-2 font-bold uppercase text-emerald-500">
               USER STORY
@@ -88,7 +97,7 @@ const Page = () => {
               </div>
             </dl>
           </div>
-        </div>
+        </Container>
       </section>
       <section className="relative  px-8 py-12">
         <div className="container">

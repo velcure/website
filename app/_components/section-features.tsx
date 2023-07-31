@@ -396,24 +396,17 @@ const Article: React.FC<ArticleProps> = (props) => {
   return (
     <div className="flex">
       <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-        <h3 className="text-default text-2xl font-semibold">
+        <h3 className="text-2xl font-bold text-black">
           <Link href={link}>
             <span className="absolute inset-0 rounded-3xl" />
           </Link>
           {headline}
         </h3>
-        <div className="text-default mt-4 space-y-4 text-base">
+        <div className="mt-4 space-y-4 text-base text-black">
           {typeof description === "string"
-            ? description.split("\n").map((line, index) => (
-                <p
-                  key={index}
-                  className={cn("text-default mt-4 text-base", {
-                    "mt-0": index === 0,
-                  })}
-                >
-                  {line}
-                </p>
-              ))
+            ? description
+                .split("\n")
+                .map((line, index) => <p key={index}>{line}</p>)
             : description}
         </div>
         <div className="mt-6 flex items-center">
