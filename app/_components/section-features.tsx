@@ -2,6 +2,7 @@
 import { cn } from "#/lib/utils";
 import { CircleBackground } from "#/ui/CircleBackground";
 import { Container } from "#/ui/Container";
+import { FadeInWhenVisible } from "#/ui/FadeInWhenVisible";
 import { AnimatePresence, MotionProps, motion } from "framer-motion";
 import { ArrowDown, ArrowRightIcon } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
@@ -136,81 +137,81 @@ export const SectionFeatures = forwardRef<
       <section className="relative py-24">
         <Container>
           <div className="max-w-2xl">
-            <h2 className="text-wrap:balance] text-3xl font-bold tracking-tight sm:text-4xl">
-              Simplified Transport Management
-            </h2>
+            <FadeInWhenVisible>
+              <h2 className="text-wrap:balance] text-3xl font-bold tracking-tight sm:text-4xl">
+                Simplified Transport Management
+              </h2>
+            </FadeInWhenVisible>
             <div className="mt-6 space-y-6 text-lg  leading-8">
-              <p>
-                Stop struggling with fragmented booking and coordination
-                workflows. Velcure consolidates all your medical transport needs
-                in one user-friendly platform. Quickly request, schedule, track
-                vehicles, and communicate updates. Intuitive tools and real-time
-                data enable smooth collaboration across departments. With just a
-                few taps, manage the entire transport lifecycle.
-              </p>
-              <p>
-                We believe technology is the answer to the world's greatest
-                challenges. Velcure empowers efficient, streamlined management
-                for better patient care through sophisticated yet easy-to-use
-                software solutions.
-              </p>
+              <FadeInWhenVisible>
+                <p>
+                  Stop struggling with fragmented booking and coordination
+                  workflows. Velcure consolidates all your medical transport
+                  needs in one user-friendly platform. Quickly request,
+                  schedule, track vehicles, and communicate updates. Intuitive
+                  tools and real-time data enable smooth collaboration across
+                  departments. With just a few taps, manage the entire transport
+                  lifecycle.
+                </p>
+              </FadeInWhenVisible>
+              <FadeInWhenVisible>
+                <p>
+                  We believe technology is the answer to the world's greatest
+                  challenges. Velcure empowers efficient, streamlined management
+                  for better patient care through sophisticated yet easy-to-use
+                  software solutions.
+                </p>
+              </FadeInWhenVisible>
             </div>
           </div>
           <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-              <div className="flex">
-                <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                  <h3 className="text-default text-2xl font-semibold">
-                    <Link href="/medical-facilities">
-                      <span className="absolute inset-0 rounded-3xl" />
-                    </Link>
-                    Step Into the Future of Medical Transport
-                  </h3>
-                  <p className="text-default mt-4 text-base">
-                    Velcure provides an innovative platform to simplify and
-                    streamline your facility's transport booking and
-                    coordination. Say goodbye to fragmented workflows and wasted
-                    time.
-                  </p>
-                  <p className="text-default mt-4 text-base">
-                    Our easy-to-use system empowers you to quickly book
-                    transports, track vehicles in real-time, and smooth
-                    collaboration across departments - all from one centralized
-                    hub.
-                  </p>
-                  <p className="text-default mt-6 text-sm font-bold">
-                    See Velcure In Action{" "}
-                    <ArrowRightIcon className="ml-1 inline-block h-4 w-4" />
-                  </p>
-                </article>
-              </div>
-              <div className="flex">
-                <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                  <h3 className="text-default text-2xl font-semibold">
-                    <Link href="/ambulance-services">
-                      <span className="absolute inset-0 rounded-3xl" />
-                    </Link>
-                    Smart Tech for Smarter Ambulance Services
-                  </h3>
-                  <p className="text-default mt-4 text-base">
-                    Velcure provides a revolutionary booking platform designed
-                    to meet the unique needs of ambulance providers. Streamline
-                    scheduling, routing, and communication with intuitive tools
-                    purpose-built for your work.
-                  </p>
-                  <p className="text-default mt-4 text-base">
-                    Discover real-time trip management, optimized routing,
-                    simplified billing and more benefits that can transform your
-                    operations.
-                  </p>
-                  <div className="mt-6 flex items-center">
-                    <span className="text-default text-sm font-bold">
-                      See How Velcure Empowers You
-                    </span>
-                    <ArrowRightIcon className="ml-1 inline-block h-4 w-4" />
-                  </div>
-                </article>
-              </div>
+              <FadeInWhenVisible>
+                <Article
+                  link="/medical-facilities"
+                  headline="Step Into the Future of Medical Transport"
+                  description={
+                    <>
+                      <p>
+                        Velcure provides an innovative platform to simplify and
+                        streamline your facility's transport booking and
+                        coordination. Say goodbye to fragmented workflows and
+                        wasted time.
+                      </p>
+                      <p>
+                        Our easy-to-use system empowers you to quickly book
+                        transports, track vehicles in real-time, and smooth
+                        collaboration across departments - all from one
+                        centralized hub.
+                      </p>
+                    </>
+                  }
+                  actionLabel=" See Velcure In Action"
+                />
+              </FadeInWhenVisible>
+              <FadeInWhenVisible>
+                <Article
+                  link="/ambulance-services"
+                  headline="Smart Tech for Smarter Ambulance Services"
+                  description={
+                    <>
+                      <p>
+                        Velcure provides a revolutionary booking platform
+                        designed to meet the unique needs of ambulance
+                        providers. Streamline scheduling, routing, and
+                        communication with intuitive tools purpose-built for
+                        your work.
+                      </p>
+                      <p>
+                        Discover real-time trip management, optimized routing,
+                        simplified billing and more benefits that can transform
+                        your operations.
+                      </p>
+                    </>
+                  }
+                  actionLabel="See How Velcure Empowers You"
+                />
+              </FadeInWhenVisible>
             </div>
           </div>
         </Container>
@@ -225,19 +226,23 @@ export const SectionFeatures = forwardRef<
       >
         <Container>
           <div className="mx-auto mb-24 max-w-xl lg:mx-0 lg:max-w-3xl">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              The Smarter Way to Book Medical Transports
-            </h2>
-            <div className="mt-6 max-w-xl space-y-6 text-lg leading-8">
-              <p>
-                Stop juggling disjointed transport booking processes. Velcure
-                offers a streamlined platform purpose-built for healthcare
-                facilities. Find, book, and track vehicles in real-time with
-                just a few taps. Enable smooth coordination across departments.
-                Bring your facility into the modern era with efficient, reliable
-                medical transport booking.
-              </p>
-            </div>
+            <FadeInWhenVisible>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                The Smarter Way to Book Medical Transports
+              </h2>
+            </FadeInWhenVisible>
+            <FadeInWhenVisible>
+              <div className="mt-6 max-w-xl space-y-6 text-lg leading-8">
+                <p>
+                  Stop juggling disjointed transport booking processes. Velcure
+                  offers a streamlined platform purpose-built for healthcare
+                  facilities. Find, book, and track vehicles in real-time with
+                  just a few taps. Enable smooth coordination across
+                  departments. Bring your facility into the modern era with
+                  efficient, reliable medical transport booking.
+                </p>
+              </div>
+            </FadeInWhenVisible>
           </div>
         </Container>
         <Container className="relative">
@@ -378,3 +383,44 @@ export const SectionFeatures = forwardRef<
     </>
   );
 });
+
+type ArticleProps = {
+  link: string;
+  headline: string;
+  description: string | React.ReactNode;
+  actionLabel: string;
+};
+const Article: React.FC<ArticleProps> = (props) => {
+  const { headline, description, link, actionLabel } = props;
+
+  return (
+    <div className="flex">
+      <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
+        <h3 className="text-default text-2xl font-semibold">
+          <Link href={link}>
+            <span className="absolute inset-0 rounded-3xl" />
+          </Link>
+          {headline}
+        </h3>
+        <div className="text-default mt-4 space-y-4 text-base">
+          {typeof description === "string"
+            ? description.split("\n").map((line, index) => (
+                <p
+                  key={index}
+                  className={cn("text-default mt-4 text-base", {
+                    "mt-0": index === 0,
+                  })}
+                >
+                  {line}
+                </p>
+              ))
+            : description}
+        </div>
+        <div className="mt-6 flex items-center">
+          <span className="text-default text-sm font-bold">{actionLabel}</span>
+          <ArrowRightIcon className="ml-1 inline-block h-4 w-4" />
+        </div>
+      </article>
+    </div>
+  );
+};
