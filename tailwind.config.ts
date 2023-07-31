@@ -22,6 +22,9 @@ export default {
       },
     },
     extend: {
+      animation: {
+        "spin-slower": "spin 6s linear infinite",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },

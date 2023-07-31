@@ -23,7 +23,7 @@ export const buttonClass = cva(
       appearance: {
         ghost: "",
         default: "shadow-sm",
-        outline: "bg-transparent border-solid", // outline has no shadow
+        outline: "border-solid", // outline has no shadow
       },
       color: {
         primary: "focus-visible:outline-brand-default",
@@ -67,7 +67,10 @@ export const buttonClass = cva(
       {
         appearance: "outline",
         color: "primary",
-        class: "border-brand-default text-emphasis hover:bg-muted",
+        class: [
+          "bg-transparent bg-opacity-50 border-gray-600 border-opacity-10 text-emphasis",
+          "hover:bg-muted hover:border-opacity-20",
+        ],
       },
       {
         appearance: "outline",

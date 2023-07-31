@@ -10,15 +10,16 @@ export const TeaserHero: React.FC = () => {
         <div className="grid auto-cols-fr grid-cols-1 gap-4 md:grid-cols-2">
           <div className="flex flex-col items-start justify-center pb-8 md:pb-24">
             <div className="mb-2 font-semibold uppercase">
-              IMPRESSIVE TEASER
+              The Future of Medical Transport Booking
             </div>
             <h1 className="mb-4 text-3xl font-bold tracking-tighter md:text-6xl">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr
+              Book Medical Transports Seamlessly
             </h1>
             <p className="mb-8 text-lg tracking-tight">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua.
+              Velcure revolutionizes medical transport booking for healthcare
+              facilities. Our user-friendly platform empowers you to
+              conveniently find and book the right ambulance for patient
+              transfers.
             </p>
             <BookAppointmentButton />
           </div>
@@ -33,6 +34,8 @@ export const TeaserHero: React.FC = () => {
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 top-auto h-[20%] w-full bg-emerald-200 sm:w-[40%] md:left-auto md:top-0 md:h-full"></div>
+      {/** gradient white with opacity to white, from bottom to 20% from bottom */}
+      <div className="absolute bottom-0 left-0 right-0 top-auto z-10 h-[10%] w-full bg-gradient-to-t from-white from-20% via-white/50 via-50% to-transparent "></div>
     </section>
   );
 };

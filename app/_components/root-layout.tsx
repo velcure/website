@@ -25,10 +25,10 @@ interface RootLayoutContextValue {
   pathname: string;
 }
 
-const MenuIcon = forwardRef<SVGElement, ComponentPropsWithoutRef<"svg">>(
+const MenuIcon = forwardRef<SVGSVGElement, ComponentPropsWithoutRef<"svg">>(
   (props, ref) => {
     return (
-      <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <svg ref={ref} viewBox="0 0 24 24" aria-hidden="true" {...props}>
         <path d="M2 6h20v2H2zM2 16h20v2H2z" />
       </svg>
     );
@@ -59,10 +59,13 @@ const navBase = cva(
     "text-sm",
     "font-semibold",
     "rounded-md",
-    "px-2",
-    "py-1",
-    "hover:bg-brand-default",
-    "hover:text-brand",
+    "px-4",
+    "py-2",
+    // "hover:bg-brand-default",
+    // "hover:text-brand",
+    "outline-none",
+    "hover:bg-gray-50",
+    "transition-colors duration-200 ease-in-out",
   ],
   {
     variants: {
@@ -86,7 +89,7 @@ const Header: React.FC<HeaderProps> = (props) => {
           <Logomark className="h-8 sm:hidden" />
           <Logo className="hidden h-8 sm:flex" />
         </Link>
-        <nav className="hidden items-center space-x-6 text-sm font-medium md:flex">
+        <nav className="hidden items-center text-sm font-medium md:flex">
           {navConfig.mainNav.map((item) => {
             if (item.href) {
               return (
