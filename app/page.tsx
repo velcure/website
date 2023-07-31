@@ -9,7 +9,7 @@ export default function Page() {
       <SectionFeatures />
 
       {/* <SectionBenefits /> */}
-      <SectionFAQ className="px-8 py-24 md:pb-44" />
+      <SectionFAQ className="py-24 md:pb-44" />
     </>
   );
 }

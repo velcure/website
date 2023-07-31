@@ -15,7 +15,7 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <section className="relative">
+    <section className="relative mt-[-3.5rem] pt-24 md:mt-[-6rem] md:pt-44">
       <PageIntro
         eyebrow="Optimize Your Operations"
         title="Empowering Ambulance Services with Smarter Booking Solutions"

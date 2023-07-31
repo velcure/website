@@ -17,6 +17,7 @@ import React, {
   ReactElement,
   createContext,
   forwardRef,
+  useEffect,
   useId,
   useMemo,
   useState,
@@ -165,6 +166,25 @@ const RootLayoutInner: React.FC<RootLayoutInnerProps> = (props) => {
   const panelId = useId();
   const [expanded, setExpanded] = useState(false);
   const shouldReduceMotion = useReducedMotion();
+
+  useEffect(() => {
+    if (!expanded) {
+      return;
+    }
+    const handleOnClick = (e: MouseEvent) => {
+      if (e.target instanceof HTMLElement) {
+        console.log(e.target);
+        console.log(e.target.closest("a")?.href === window.location.href);
+        if (e.target.closest("a")?.href) {
+          setExpanded(false);
+        }
+      }
+    };
+    window.addEventListener("click", handleOnClick);
+    return () => {
+      window.removeEventListener("click", handleOnClick);
+    };
+  }, [expanded]);
 
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
