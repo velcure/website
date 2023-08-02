@@ -40,7 +40,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           fontSans.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light">
           <RootLayout>{children}</RootLayout>
         </ThemeProvider>
       </body>

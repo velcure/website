@@ -62,20 +62,20 @@ export const buttonClass = cva(
       {
         appearance: "default",
         color: "inverted",
-        class: "bg-white text-brand hover:bg-gray-50",
+        class: "bg-white text-default hover:bg-neutral-50",
       },
       {
         appearance: "outline",
         color: "primary",
         class: [
-          "bg-transparent bg-opacity-50 border-gray-600 border-opacity-10 text-emphasis",
+          "bg-transparent bg-opacity-50 border-neutral-600 border-opacity-10 text-emphasis",
           "hover:bg-muted hover:border-opacity-20",
         ],
       },
       {
         appearance: "outline",
         color: "inverted",
-        class: "border-white text-white hover:bg-gray-50",
+        class: "border-white text-white hover:bg-neutral-50",
       },
     ],
     defaultVariants: {

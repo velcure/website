@@ -120,7 +120,7 @@ const Header: React.FC<HeaderProps> = (props) => {
           {/** actions: login, signup */}
           <Button
             size="lg"
-            appearance="outline"
+            appearance="default"
             color={invert ? "inverted" : "primary"}
           >
             Login
