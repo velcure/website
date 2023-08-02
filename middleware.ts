@@ -1,4 +1,10 @@
+import Negotiator from "negotiator";
 import { NextResponse, type NextRequest } from "next/server";
+
+const locales = ["en"];
+const headers = { "accept-language": "en-US,en;q=0.5" };
+const languages = new Negotiator({ headers }).languages();
+const defaultLocale = "en";
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`

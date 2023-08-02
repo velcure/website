@@ -3,7 +3,6 @@
 import { navConfig } from "#/config/nav";
 import { cn } from "#/lib/utils";
 import { Container } from "#/ui/Container";
-import { GridPattern } from "#/ui/GridPattern";
 import { Logo, Logomark } from "#/ui/Logo";
 import { Button } from "#/ui/button";
 import { MobileNav } from "#/ui/mobile-nav";
@@ -190,8 +189,16 @@ const RootLayoutInner: React.FC<RootLayoutInnerProps> = (props) => {
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       <div className="relative flex min-h-screen flex-col">
         <header>
+          <div className="bg-brand-default text-brand pt-2">
+            <Container className="flex justify-end">
+              <div className="divide-x divide-white text-sm">
+                <span className="px-2">English</span>
+                <span className="px-2">German</span>
+              </div>
+            </Container>
+          </div>
           <div
-            className="absolute left-0 right-0 top-2 z-40 pt-14"
+            className="absolute left-0 right-0 top-8 z-40 pt-14"
             aria-hidden={expanded ? "true" : undefined}
             // https://github.com/DefinitelyTyped/DefinitelyTyped/pull/60822
             // @ts-ignore
@@ -236,11 +243,6 @@ const RootLayoutInner: React.FC<RootLayoutInnerProps> = (props) => {
             layout
             className="relative isolate flex w-full flex-col pt-9"
           >
-            <GridPattern
-              yOffset={-96}
-              interactive
-              className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full fill-neutral-50 stroke-neutral-950/5 [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)]"
-            />
             <main className="w-full flex-auto">{children}</main>
           </motion.div>
         </motion.div>

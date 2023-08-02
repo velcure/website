@@ -23,7 +23,7 @@ import recurringImage from "./_images/recurring.png";
 export default function Page() {
   return (
     <>
-      <section className="relative mt-[-3.5rem] bg-blue-50 pt-24 md:mt-[-6rem] md:pt-44">
+      <section className="relative mt-[-5.5rem] bg-blue-50 pt-24 md:mt-[-6rem] md:pt-44">
         <Container className="relative mt-24 sm:mt-32">
           <div className="grid auto-cols-fr grid-cols-1 gap-8 md:grid-cols-2">
             <FadeInWhenVisible>
