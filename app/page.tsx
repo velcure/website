@@ -17,6 +17,7 @@ import { TbAmbulance, TbBuildingEstate } from "react-icons/tb";
 import { SectionFAQ } from "./_components/section-faq";
 import bookingListImage from "./_images/booking_list.png";
 import createPatientImage from "./_images/create_patient.png";
+import marketplaceImage from "./_images/marketplace.png";
 import recurringImage from "./_images/recurring.png";
 
 export default function Page() {
@@ -67,7 +68,8 @@ export default function Page() {
           </div>
         </Container>
       </section>
-      <section className="text-default relative bg-blue-50 py-24">
+
+      <section className="text-default relative bg-blue-50 py-24 sm:py-32">
         <Container>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             <div className="flex flex-col items-center text-center">
@@ -97,7 +99,48 @@ export default function Page() {
           </div>
         </Container>
       </section>
-      <section className="relative overflow-hidden py-24">
+
+      <section className="relative py-24 sm:py-32">
+        <Container>
+          <div className="mx-auto max-w-2xl sm:text-center">
+            <Eyebrow>Expand Your Coverage</Eyebrow>
+            <h2 className="text-default mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+              Connect With Qualified Providers
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-neutral-600">
+              The Velcure Marketplace allows medical facilities to access an
+              extensive network of accredited ambulance providers. Easily submit
+              transport requests and get matched with qualified partner services
+              in your area for fulfillment.
+            </p>
+            <p className="mt-6 text-lg leading-8 text-neutral-600">
+              Verified, integrated providers ensure the highest standards of
+              safety and quality. Real-time visibility and centralized
+              coordination enables a smooth hand-off for each trip.
+            </p>
+            <p className="mt-6 text-lg leading-8 text-neutral-600">
+              Expand your service reach through trusted, reliable providers on
+              the Velcure Marketplace. We facilitate the connections so you can
+              focus on patient care.
+            </p>
+          </div>
+        </Container>
+        <div className="relative overflow-hidden pt-16">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <Spotlight
+              src={marketplaceImage}
+              alt="Velcure Marketplace"
+              className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-neutral-900/10"
+              sizes="100vw"
+            />
+            <div className="relative" aria-hidden="true">
+              <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden py-24 sm:py-32">
         <Container>
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:ml-auto lg:pl-4 lg:pt-4">
@@ -140,7 +183,7 @@ export default function Page() {
           </div>
         </Container>
       </section>
-      <section className="relative overflow-hidden py-24">
+      <section className="relative overflow-hidden py-24 sm:py-32">
         <Container>
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <div className="lg:pr-8 lg:pt-4">
