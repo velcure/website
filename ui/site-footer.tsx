@@ -2,6 +2,7 @@ import { siteConfig } from "#/config/site";
 import { Map, ShieldAlert, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { Logo } from "./Logo";
 
 const features = [
   {
@@ -48,15 +49,11 @@ export const SiteFooter: React.FC = () => {
       <div className="container">
         <div className="grid h-full w-full grid-cols-12 gap-8 self-center">
           <div className="col-span-12 md:col-span-8">
-            <Link
-              href="/"
-              className="mr-[4vw] flex items-center space-x-2 text-2xl"
-            >
-              <span>V</span>
-              <span className="hidden font-bold sm:inline-block">
-                {siteConfig.name}
-              </span>
-            </Link>
+            <div>
+              <Link href="/" className="mr-[4vw]">
+                <Logo className="h-10" aria-hidden="true" invert />
+              </Link>
+            </div>
             <div className="mt-4 max-w-sm">
               <p>
                 Velcure is a platform for Clinics and Hospitals to manage their

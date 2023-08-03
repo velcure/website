@@ -87,8 +87,8 @@ const Header: React.FC<HeaderProps> = (props) => {
     <Container>
       <div className="flex items-center justify-between">
         <Link href="/" className={cn("mr-[4vw]", invert && "text-white")}>
-          <Logomark className="h-8 sm:hidden" />
-          <Logo className="hidden h-8 sm:flex" />
+          <Logomark className="h-8 sm:hidden" invert={invert} />
+          <Logo className="hidden h-8 sm:flex" invert={invert} />
         </Link>
         <nav className="hidden items-center text-sm font-medium md:flex">
           {navConfig.mainNav.map((item) => {
