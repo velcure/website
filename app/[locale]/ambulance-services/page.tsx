@@ -19,7 +19,7 @@ export const metadata = {
 const Page = () => {
   return (
     <>
-      <section className="relative mt-[-3.5rem] py-24 md:mt-[-6rem] md:py-44">
+      <section className="relative mt-[-5.5rem] bg-red-50 py-24 md:mt-[-6rem] md:py-44">
         <PageIntro
           eyebrow="Optimize Your Operations"
           title="Empowering Ambulance Services with Smarter Booking Solutions"

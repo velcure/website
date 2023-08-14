@@ -3,8 +3,8 @@ export const siteConfig = {
   url: "https://velcure.com",
   contact: {
     support: {
-      email: "help@velcure.com",
-      phone: "+49 30 123 456 789",
+      email: "hello@velcure.com",
+      phone: "+4930123456789",
     },
   },
   description:

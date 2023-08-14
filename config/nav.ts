@@ -14,16 +14,5 @@ export const navConfig: NavConfig = {
       title: "Ambulance Services",
       href: "/ambulance-services",
     },
-    {
-      title: "Unternehmen",
-      items: [
-        {
-          title: "Über uns",
-        },
-        {
-          title: "So funktioniert Velcure",
-        },
-      ],
-    },
   ],
 };

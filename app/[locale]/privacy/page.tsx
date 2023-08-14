@@ -8,11 +8,11 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <section className="relative">
-      <PageIntro eyebrow="Imprint" title="Imprint">
+    <section className="relative mt-[-5.5rem] py-24 md:mt-[-6rem] md:py-44">
+      <PageIntro eyebrow="Privacy" title="Privacy Policy">
         <p>
-          Contact details and legal information about the company operating
-          Velcure.
+          Learn how Velcure collects, uses, and protects user data and
+          information.
         </p>{" "}
       </PageIntro>
     </section>

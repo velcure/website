@@ -1,31 +1,31 @@
 import { siteConfig } from "#/config/site";
 import { Map, ShieldAlert, ShieldCheck } from "lucide-react";
-import Link from "next/link";
-import React from "react";
+
+import { useTranslations } from "next-intl";
+import Link from "next-intl/link";
 import { Logo } from "./Logo";
 
-const features = [
-  {
-    title: "Hosted in Germany",
-    description:
-      "All data is hosted in Germany and is subject to the strict German data protection laws. Our Servers are ISO 27001 certified.",
-    icon: Map,
-  },
-  {
-    title: "Secure",
-    description:
-      "We use the latest security standards to ensure that your data is safe and secure.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "DSGVO",
-    description:
-      "We are fully compliant with the European General Data Protection Regulation (GDPR).",
-    icon: ShieldAlert,
-  },
-];
+export function SiteFooter() {
+  const t = useTranslations("Footer");
 
-export const SiteFooter: React.FC = () => {
+  const features = [
+    {
+      title: t("features.hosting.title"),
+      description: t("features.hosting.description"),
+      icon: Map,
+    },
+    {
+      title: t("features.security.title"),
+      description: t("features.security.description"),
+      icon: ShieldCheck,
+    },
+    {
+      title: t("features.gdpr.title"),
+      description: t("features.gdpr.description"),
+      icon: ShieldAlert,
+    },
+  ];
+
   return (
     <footer className="bg-brand-default text-brand py-6 md:px-8 md:py-16">
       <div className="container pb-16">
@@ -55,20 +55,18 @@ export const SiteFooter: React.FC = () => {
               </Link>
             </div>
             <div className="mt-4 max-w-sm">
-              <p>
-                Velcure is a platform for Clinics and Hospitals to manage their
-                patient transportation.
-              </p>
+              <p>{t("site_description")}</p>
             </div>
             <div className="mt-6 grid gap-4">
-              <h4 className="text-xl font-bold">Help &amp; Support</h4>
+              <h4 className="text-xl font-bold">{t("helpAndSupport.title")}</h4>
               <div className="flex flex-col gap-2">
                 <div>
                   <Link
                     className="text-sm text-white hover:border-b hover:border-white"
                     href={`tel:${siteConfig.contact.support.phone}`}
                   >
-                    Support: {siteConfig.contact.support.phone}
+                    {t("helpAndSupport.support")}:{" "}
+                    {siteConfig.contact.support.phone}
                   </Link>
                 </div>
                 <div>
@@ -76,29 +74,24 @@ export const SiteFooter: React.FC = () => {
                     className="text-sm text-white hover:border-b hover:border-white"
                     href={`mailto:${siteConfig.contact.support.email}`}
                   >
-                    E-Mail: {siteConfig.contact.support.email}
+                    {t("helpAndSupport.email")}:{" "}
+                    {siteConfig.contact.support.email}
                   </Link>
                 </div>
               </div>
             </div>
           </div>
           <div className="col-span-12 flex flex-col space-y-1 md:col-span-4">
-            <h4 className="text-xl font-bold md:text-right">Company</h4>
+            <h4 className="text-xl font-bold md:text-right">
+              {t("company.title")}
+            </h4>
             <ul className="space-y-1 md:text-right">
               <li>
                 <Link
-                  href="/about"
+                  href="/legal/imprint"
                   className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
                 >
-                  <span>About</span>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/imprint"
-                  className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
-                >
-                  <span>Imprint</span>
+                  <span>{t("company.imprint")}</span>
                 </Link>
               </li>
               <li>
@@ -106,7 +99,7 @@ export const SiteFooter: React.FC = () => {
                   href="/legal"
                   className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
                 >
-                  <span>Legal</span>
+                  <span>{t("company.legal")}</span>
                 </Link>
               </li>
               <li>
@@ -114,7 +107,7 @@ export const SiteFooter: React.FC = () => {
                   href="/privacy"
                   className="text-brand border-b border-transparent text-sm hover:border-white hover:opacity-70"
                 >
-                  <span>Privacy</span>
+                  <span>{t("company.privacy")}</span>
                 </Link>
               </li>
             </ul>
@@ -122,11 +115,13 @@ export const SiteFooter: React.FC = () => {
         </div>
         <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-300">
-            &copy; {new Date().getFullYear()} by {siteConfig.name}. All rights
-            reserved.
+            {t("copyright", {
+              date: new Date().getFullYear(),
+              name: siteConfig.name,
+            })}
           </p>
         </div>
       </div>
     </footer>
   );
-};
+}

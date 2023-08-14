@@ -1,12 +1,12 @@
 "use client";
 
+import { LocaleSwitcher } from "#/components/layout/LocaleSwitcher";
 import { navConfig } from "#/config/nav";
 import { cn } from "#/lib/utils";
 import { Container } from "#/ui/Container";
 import { Logo, Logomark } from "#/ui/Logo";
 import { Button } from "#/ui/button";
 import { MobileNav } from "#/ui/mobile-nav";
-import { SiteFooter } from "#/ui/site-footer";
 import { cva } from "class-variance-authority";
 import { MotionConfig, motion, useReducedMotion } from "framer-motion";
 import { XIcon } from "lucide-react";
@@ -157,10 +157,11 @@ const Header: React.FC<HeaderProps> = (props) => {
 
 interface RootLayoutInnerProps {
   children: React.ReactNode;
+  footer: React.ReactNode;
 }
 
 const RootLayoutInner: React.FC<RootLayoutInnerProps> = (props) => {
-  const { children } = props;
+  const { children, footer } = props;
 
   const panelId = useId();
   const [expanded, setExpanded] = useState(false);
@@ -191,10 +192,7 @@ const RootLayoutInner: React.FC<RootLayoutInnerProps> = (props) => {
         <header>
           <div className="bg-brand-default text-brand pt-2">
             <Container className="flex justify-end">
-              <div className="divide-x divide-white text-sm">
-                <span className="px-2">English</span>
-                <span className="px-2">German</span>
-              </div>
+              <LocaleSwitcher />
             </Container>
           </div>
           <div
@@ -237,7 +235,7 @@ const RootLayoutInner: React.FC<RootLayoutInnerProps> = (props) => {
         </header>
         <motion.div
           layout
-          className="relative flex flex-auto overflow-hidden rounded-t-[40px] bg-white pt-14"
+          className="relative flex flex-auto overflow-hidden  rounded-t-[40px]  bg-white pt-14"
         >
           <motion.div
             layout
@@ -248,7 +246,7 @@ const RootLayoutInner: React.FC<RootLayoutInnerProps> = (props) => {
         </motion.div>
         <motion.div layout className="bg-white">
           <div className="bg-brand-default overflow-hidden rounded-t-[40px] pt-14">
-            <SiteFooter />
+            {footer}
           </div>
         </motion.div>
       </div>
@@ -258,15 +256,16 @@ const RootLayoutInner: React.FC<RootLayoutInnerProps> = (props) => {
 
 export interface RootLayoutProps {
   children: React.ReactNode;
+  footer: React.ReactNode;
 }
 export const RootLayout: React.FC<RootLayoutProps> = (props) => {
-  const { children } = props;
+  const { children, footer } = props;
 
   const ctx = useMemo(() => ({ pathname: "" }), []);
 
   return (
     <RootLayoutContext.Provider value={ctx}>
-      <RootLayoutInner>{children}</RootLayoutInner>
+      <RootLayoutInner footer={footer}>{children}</RootLayoutInner>
     </RootLayoutContext.Provider>
   );
 };

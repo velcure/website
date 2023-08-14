@@ -21,7 +21,7 @@ export const metadata = {
 const Page = () => {
   return (
     <>
-      <section className="relative mt-[-3.5rem] pt-24 md:mt-[-6rem] md:pt-44">
+      <section className="relative mt-[-5.5rem] bg-teal-50 py-24 md:mt-[-6rem] md:py-44">
         <PageIntro
           eyebrow="Maximize Your Team's Efficiency"
           title="Empowering Healthcare Facilities with Efficient Medical Transport

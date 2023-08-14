@@ -1,0 +1,115 @@
+{
+  "LocaleSwitcher": {
+    "locale": "{locale, select, de {German} en {English} other {Unknown}}"
+  },
+  "Footer": {
+    "site_description": "Velcure ist eine Plattform für Kliniken und Krankenhäuser, um den Transport ihrer Patienten zu verwalten.",
+    "copyright": "© {date} von {name}. Alle Rechte vorbehalten.",
+    "helpAndSupport": {
+      "title": "Hilfe & Unterstützung",
+      "support": "Support",
+      "email": "E-Mail"
+    },
+    "company": {
+      "title": "Unternehmen",
+      "imprint": "Impressum",
+      "legal": "Rechtliches",
+      "privacy": "Datenschutz"
+    },
+    "features": {
+      "hosting": {
+        "title": "Gehostet in Deutschland",
+        "description": "Alle Daten werden in Deutschland gehostet und unterliegen den strengen deutschen Datenschutzgesetzen. Unsere Server sind ISO 27001 zertifiziert."
+      },
+      "security": {
+        "title": "Sicher",
+        "description": "Wir verwenden die neuesten Sicherheitsstandards, um sicherzustellen, dass Ihre Daten sicher und geschützt sind."
+      },
+      "gdpr": {
+        "title": "DSGVO",
+        "description": "Wir erfüllen vollständig die Europäische Datenschutz-Grundverordnung (DSGVO)."
+      }
+    }
+  },
+  "Index": {
+    "hero": {
+      "eyebrow": "Die Zukunft der medizinischen Transportbuchung",
+      "heading": "Medizinische Transporte problemlos buchen",
+      "description": "Velcure revolutioniert die Buchung von medizinischen Transporten für Gesundheitseinrichtungen. Unsere benutzerfreundliche Plattform ermöglicht es Ihnen, bequem den richtigen Krankenwagen für Patiententransfers zu finden und zu buchen."
+    },
+    "target_groups": {
+      "hospitals": "Für Krankenhäuser & Kliniken",
+      "doctors": "Für Ärzte & Praxen",
+      "nursing_homes": "Für Pflegeheime",
+      "ambulance_providers": "Für Rettungsdienste"
+    },
+    "section_market": {
+      "eyebrow": "Erweitern Sie Ihre Abdeckung",
+      "heading": "Verbinden Sie sich mit qualifizierten Anbietern",
+      "description1": "Der Velcure Marktplatz ermöglicht es medizinischen Einrichtungen, auf ein umfangreiches Netzwerk von akkreditierten Rettungsdienstanbietern zuzugreifen. Senden Sie einfach Transportanfragen und finden Sie qualifizierte Partnerdienste in Ihrer Nähe zur Erfüllung.",
+      "description2": "Verifizierte, integrierte Anbieter gewährleisten höchste Sicherheits- und Qualitätsstandards. Echtzeit-Transparenz und zentrale Koordination ermöglichen einen reibungslosen Übergang für jede Fahrt.",
+      "description3": "Erweitern Sie Ihren Dienstleistungsbereich durch vertrauenswürdige, zuverlässige Anbieter auf dem Velcure Marktplatz. Wir erleichtern die Verbindungen, damit Sie sich auf die Patientenversorgung konzentrieren können."
+    },
+    "recurring_bookings": {
+      "headline": "Wiederkehrende Buchungen",
+      "description1": "Velcure erleichtert die Einrichtung von wiederkehrenden Krankenwagentransporten. Mit unserer Serienbuchungsfunktion können Sie regelmäßige Fahrten wie Dialyse oder Chemotherapie mit nur wenigen Klicks planen.",
+      "description2": "Velcure generiert automatisch alle zugehörigen Fahrten basierend auf Ihren Angaben. Keine Notwendigkeit für wiederholte manuelle Eingaben.",
+      "description3": "Das Dashboard bietet einen Überblick über bevorstehende wiederkehrende Fahrten. Ändern, verschieben oder stornieren Sie Einzelbuchungen bei Bedarf einfach. Änderungen werden in der gesamten Serie synchronisiert.",
+      "description4": "Mit Velcures Serienbuchungstool können regelmäßige Krankenwagentransporte schnell geplant werden, ohne jedes Mal gesondert Anbieter kontaktieren zu müssen. Die automatisierte Funktion vereinfacht das Management wiederkehrender Transporte."
+    },
+    "managing_patients": {
+      "headline": "Patientenverwaltung",
+      "features": {
+        "one": {
+          "title": "Patientenprofile vereinfachen",
+          "description": "Velcure ermöglicht es Ihnen, Patientenprofile einfach zu erstellen, zu verwalten und wiederzuverwenden, um den Transport reibungslos zu buchen. Wichtige demografische und medizinische Daten können über die API-Integration aus Ihrem Krankenhaus-IT-System importiert werden. Profile werden für den zukünftigen Zugriff gespeichert und vermeiden so redundante Dateneingaben."
+        },
+        "two": {
+          "title": "Nahtlose Systemintegration",
+          "description": "Verbinden Sie Velcure mit Ihrer bestehenden Krankenhaus-IT-Infrastruktur, um das schnelle Importieren von Patienteninformationen in Transportprofile zu ermöglichen. Robuste APIs und Verbindungen ermöglichen einen nahtlosen Datenfluss zwischen den Systemen. Dies spart Zeit und gewährleistet genaue, aktuelle Datensätze."
+        },
+        "three": {
+          "title": "Sicherer Zugriff und Kontrollen",
+          "description": "Patientenprofile und Daten sind durch detaillierte Zugriffsberechtigungen geschützt. Nutzungsaktivitäten und Änderungen werden für Audits protokolliert."
+        }
+      }
+    },
+    "CTA": {
+      "headline": "Möchten Sie mehr erfahren? <br />Lassen Sie uns über die Integration von Velcure sprechen!"
+    },
+    "featureGrid": {
+      "headline": "Vereinfachte Funktionen für effiziente Prozesse",
+      "description": "Velcure bietet medizinischen Einrichtungen wichtige Funktionen zur Optimierung von Arbeitsabläufen rund um medizinische Transporte.",
+      "features": {
+        "1": {
+          "title": "Einfache Buchung.",
+          "description": "Buchen Sie Krankenwagentransporte schnell und einfach online ohne manuellen Aufwand."
+        },
+        "2": {
+          "title": "Anpassbare Buchungen.",
+          "description": "Passen Sie einzelne Fahrten innerhalb einer Serie flexibel an, verschieben oder stornieren Sie sie bei Bedarf."
+        },
+        "3": {
+          "title": "Wiederkehrende Buchungen.",
+          "description": "Richten Sie regelmäßige Fahrten wie Dialyse als wiederkehrende Buchungsserie ein."
+        },
+        "4": {
+          "title": "Vorgeschlagene Zeitfenster.",
+          "description": "Schlagen Sie geeignete alternative Zeitfenster vor, wenn vom Anbieter gewünscht."
+        },
+        "5": {
+          "title": "Eingehende Fahrten.",
+          "description": "Sehen und verwalten Sie alle eingehenden Transportanfragen an einem Ort."
+        },
+        "6": {
+          "title": "Automatische Aktualisierungen.",
+          "description": "Benachrichtigen Sie automatisch relevante Parteien über Statusänderungen wie Verspätungen."
+        }
+      }
+    },
+    "cta-customizing": {
+      "headline": "An Ihre Bedürfnisse angepasst",
+      "description": "Velcure kann an Ihre spezifischen Anforderungen angepasst werden. Fehlt eine Integration? Benötigen Sie firmenspezifische Anpassungen? Unser Entwicklerteam unterstützt Sie gerne bei der Umsetzung von Anpassungsanfragen."
+    }
+  }
+}

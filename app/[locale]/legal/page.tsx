@@ -8,7 +8,7 @@ export const metadata = {
 
 const Page = () => {
   return (
-    <section className="relative">
+    <section className="relative mt-[-5.5rem] py-24 md:mt-[-6rem] md:py-44">
       <PageIntro eyebrow="Legal" title="Legal Information">
         <p>
           Review the terms and conditions governing use of the Velcure platform.

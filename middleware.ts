@@ -1,19 +1,18 @@
-import Negotiator from "negotiator";
-import { NextResponse, type NextRequest } from "next/server";
+import createMiddleware from "next-intl/middleware";
 
-const locales = ["en"];
-const headers = { "accept-language": "en-US,en;q=0.5" };
-const languages = new Negotiator({ headers }).languages();
-const defaultLocale = "en";
+export default createMiddleware({
+  // A list of all locales that are supported
+  locales: ["en", "de"],
+
+  // If this locale is matched, pathnames work without a prefix (e.g. `/about`)
+  defaultLocale: "en",
+  localeDetection: true,
+});
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  matcher: [
+    // "'/((?!_next).*)',",
+    "/((?!api|_next/static|_next|favicon.ico).*)",
+  ],
 };
-
-export function middleware(request: NextRequest) {
-  // Setting cookies on the response using the `ResponseCookies` API
-  const response = NextResponse.next();
-
-  return response;
-}
