@@ -46,7 +46,7 @@ export const FeatureSection = forwardRef<HTMLDivElement, FeatureSectionProps>(
                 <h3 className="text-default text-3xl font-bold tracking-tight sm:text-4xl">
                   {headline}
                 </h3>
-                <div className="text-baes mt-10 max-w-xl space-y-8 leading-7 text-neutral-600 lg:max-w-none">
+                <div className="mt-10 flex max-w-xl flex-col gap-8 text-base leading-7 text-neutral-600 lg:max-w-none">
                   {features.map((feature, index) => (
                     <div className="relative">
                       {feature.title && (
